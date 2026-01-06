@@ -1,0 +1,128 @@
+.App {
+  text-align: center;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  display:flex;
+  background-color: #282c34;
+  color: white;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Chat CSS */
+.chatbox {
+  background-color: #353541;
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.chat-input-holder {
+  padding: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.chat-log {
+  text-align: left;
+  white-space: pre-wrap;
+  padding-bottom: 140px; /* espaço para o input */
+  overflow-y: auto;
+  height: 100%;
+}
+
+
+
+.chat-input-form {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+.chat-input-textarea {
+  width: 100%;
+  min-height: 50px;
+  max-height: 150px;
+  resize: none;
+
+  padding: 12px 56px 12px 12px; /* espaço para o botão */
+  font-size: 16px;
+
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  margin: 0; /* remove margin que desalinharía o botão */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+
+  background: #40414f;
+  color: white;
+}
+
+.chat-input-textarea:focus {
+  outline: 2px solid #0da37f;
+  outline-offset: 2px;
+}
+
+.send-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: none;
+  background: #0da37f;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-button:disabled {
+  background: #6b7280;
+  cursor: not-allowed;
+}
